@@ -1,0 +1,125 @@
+@import "../../../utils/responsive.module.scss";
+@import "../../../utils/mixins.module.scss";
+@import "../../../utils/colors.scss";
+
+
+.header {
+
+    @include RP(("padding-top":10,
+            "padding-bottom":10,
+        ));
+
+    border-radius: 0px 0px 1px 0px;
+    border: 1px solid #231F20;
+    background-color: $dark;
+    position: fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+
+    .hamburgerMenu {
+
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+        align-items: center;
+    }
+
+    img {
+        @include RP(("width":141.16,
+                "height":64,
+            ));
+        cursor: pointer;
+    }
+
+    ul {
+       
+        @include RP(("gap":24, "font-size":16, "line-height": 24, ));
+        list-style: none;
+        color: $grey;
+        align-items: center;
+        font-weight: 600;
+
+        li {
+            text-decoration: none;
+        }
+
+        li:first-child {
+            color: $reds;
+        }
+
+        li:nth-child(2):hover {
+            color: $reds;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+    }
+
+    .navExtras {
+        @include RP(("gap":12,
+            ));
+        cursor: pointer;
+
+        span {
+            @include RP(("font-size":14,
+                    "line-height": 16.8,
+                    "width":155,
+                    "height":42,
+                ));
+            color: #ffff;
+            padding: 12px, 16px, 12px, 16px;
+            border-radius: 400px;
+            gap: 4px;
+            border: 1px solid $reds;
+            background-color: $reds;
+            font-weight: 600s;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+            transition: all 0.5s ease;
+
+        }
+
+        span:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+
+
+
+
+.main {
+    @include RP(("height":318,
+        ));
+    background-image: url('../../../../assets/images/Background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+    h3 {
+        @include RP(("font-size":32,
+                "line-height": 35.2,
+            ));
+        font-weight: 500;
+        font-family: 'Bebas Neue', sans-serif;
+
+        span {
+            color: $reds;
+        }
+
+    }
+}

@@ -1,0 +1,33 @@
+@import "../../utils/responsive.module.scss";
+@import "../../utils/mixins.module.scss";
+@import "../../utils/colors.scss";
+
+
+
+
+
+.chatbox {
+    @include RP(("max-height": 920));
+    background-color: #F8F8F8;
+    //width: 65%;
+    //border: 1px solid #E6E6E7;
+    //border-radius: 0px 24px 24px 0px;
+}
+
+.emptybox {
+    @include RP(("height": 770));
+    
+}
+
+.big {
+    @include RP(("min-height": 920));
+    border: 1px solid #E6E6E7;
+    border-left:0px;
+    border-radius: 0px 24px 24px 0px;
+    background-color: #f8faf2;
+    text-align: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+
+}

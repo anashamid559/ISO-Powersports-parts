@@ -1,0 +1,36 @@
+@import "../../utils/responsive.module.scss";
+@import "../../utils/mixins.module.scss";
+@import "../../utils/colors.scss";
+
+
+
+
+.border {
+    border-bottom: 1px solid #E6E6E7;
+    // background-color: #f6f3e2;
+    padding: 19px 20px 19px 20px;
+    //border-radius: 0px 24px 0px 0px;
+    gap: 10px;
+    display: flex;
+
+    .arrow{
+        width:50px;
+        height:50px;
+        color:black;
+    }
+
+
+
+    img {
+        @include RP(("height": 42, "width": 42));
+        cursor: pointer;
+    }
+
+    h5 {
+        @include RP(("font-size": 20, "line-height": 22));
+        font-weight: 500;
+        color: #231F20;
+        font-family: 'Bebas Neue', sans-serif;
+    
+    }
+}

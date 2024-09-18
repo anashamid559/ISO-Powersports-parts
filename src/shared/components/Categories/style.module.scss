@@ -1,0 +1,29 @@
+@import "../../utils/responsive.module.scss";
+@import "../../utils/mixins.module.scss";
+@import "../../utils/colors.scss";
+
+
+
+.content{
+    .button {
+        @include RP(("font-size":12,"line-height":18));
+
+        font-weight: 600;
+        padding: 8px 20px 6px 20px;
+        border-radius: 21px;
+        color: #231F20;
+        cursor: pointer;
+        border: 1px solid transparent;
+        background-color: transparent; 
+    }
+    
+    .selected {
+        border: 1px solid #E6E6E7; 
+        background-color: #E6E6E7; 
+    }
+    
+    .button:not(.selected) {
+        border: 1px solid #86878A; 
+        background-color: transparent; 
+    }
+}

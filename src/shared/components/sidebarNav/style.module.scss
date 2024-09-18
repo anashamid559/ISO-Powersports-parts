@@ -1,0 +1,101 @@
+@import "../../utils/responsive.module.scss";
+@import "../../utils/mixins.module.scss";
+@import "../../utils/colors.scss";
+
+
+.sideNav {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow: auto;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+
+    &.open {
+        transform: translateX(0);
+    }
+
+    img {
+        width: 140px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+        list-style: none;
+        width: 100%;
+
+        li {
+            color: #fff;
+            font-size: 14px;
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: left;
+        }
+    }
+
+    .closeBtn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+
+    .navExtras {
+
+        padding: 0;
+
+        span {
+            display: flex;
+            color: #fff;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .list {
+            span {
+                //   "font-size":14,
+                //             "line-height": 16.8,
+                //             "width":155,
+                //             "height":42,
+                //         ));
+                margin-top: 20px;
+                color: #ffff;
+                width: 200px;
+                height: 42px;
+                padding: 12px, 16px, 12px, 16px;
+                border-radius: 400px;
+                gap: 4px;
+                border: 1px solid $reds;
+                background-color: $reds;
+                font-weight: 600s;
+                display: flex;
+                align-items: center;
+                justify-items: center;
+                align-content: center;
+                justify-content: center;
+                text-align: center;
+                transition: all 0.5s ease;
+
+            }
+        }
+    }
+}
